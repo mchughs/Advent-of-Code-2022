@@ -83,8 +83,6 @@
 
 ;; solution part 2
 
-(defn adjacency-chart)
-
 (time
  (let [[chart* directions*] (string/split (slurp "src/day22/input.txt") #"\n\n")
        directions (map #(if (#{"L" "R"} %) % (parse-long %)) (re-seq #"\d+|L|R" directions*))
